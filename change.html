@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: darkcyan;
+        }
+      
+        p {
+            font-size: 18px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="heading">Hello, Welcome</h1>
+
+    <p class="text">Technology has revolutionized the way we live, work, and communicate.</p>
+    <p class="text">Nature is a beautiful and essential part of our world, providing us with fresh air, water, and a home for countless species.</p>
+    <p class="text">Maintaining good health is crucial for leading a happy and fulfilling life.</p>
+    <p class="text">Education is the key to personal and societal growth, opening doors to new opportunities and knowledge.</p>
+
+    <button id="changeStyleBtn">Change Style</button>
+
+    <script>
+      
+        document.getElementById("changeStyleBtn").addEventListener("click", function() {
+            document.getElementById("heading").style.color = "red";
+
+            let paragraphs = document.getElementsByClassName("text");
+            for (let i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].style.color = "green";
+                paragraphs[i].style.fontSize = "20px";
+            }
+
+          
+            let paraTags = document.getElementsByTagName("p");
+            for (let i = 0; i < paraTags.length; i++) {
+                paraTags[i].style.fontWeight = "bold";
+            }
+        });
+    </script>
+
+</body>
+</html>
